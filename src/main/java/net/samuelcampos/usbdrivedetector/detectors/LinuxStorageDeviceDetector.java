@@ -34,7 +34,7 @@ import java.util.regex.Pattern;
 @Slf4j
 public class LinuxStorageDeviceDetector extends AbstractStorageDeviceDetector {
 
-    private static final String CMD_DF = "df -l";
+    private static final String CMD_DF = "df -h";
     private static final Pattern command1Pattern = Pattern.compile("^(\\/[^ ]+)[^%]+%[ ]+(.+)$");
 
     private static final String CMD_CHECK_USB = "udevadm info -q property -n ";
